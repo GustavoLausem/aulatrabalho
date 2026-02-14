@@ -1,0 +1,46 @@
+body {
+   background-image: url(https://aegro.com.br/images/blog/geradas/variedades-de-cafe-mais-produtivas-como-escolher-a-ideal-para-sua-fazenda.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: #ffffff;
+    height: 100px;
+    width: 50%;
+    margin: 40px auto;
+    padding: 5px;
+
+}
+
+nav {
+    background-color: #ffffff;
+    height: 300px;
+    width: 50%;
+    margin: 0px auto;
+    padding: 5px;
+}
+
+main {
+    background-color: white;
+    height: auto;
+    width: 80%;
+    margin: 5px auto;
+    padding: 5px;
+}
+
+footer {
+    background-color: white;
+    height: auto;
+    width: 60%;
+    margin: 5px auto;
+    padding: 5px;
+}
+
+section {
+    border: 2px double black;
+    margin: 5px;
+}
