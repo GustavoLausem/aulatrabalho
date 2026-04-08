@@ -15,21 +15,21 @@
 
     <header>
         <div class="logo-area">
-            <img src="" alt="Logo Café">
+            <img src="cafe.jpg" alt="Xícara de café quente com espuma">
             <h1>Coffee Day</h1>
         </div>
 
-        <nav id="menudesktop">
+        <nav id="menudesktop" aria-label="Menu Principal">
             <ul>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="informações.html">Informações</a></li>
             </ul>
         </nav>
-        <nav id="menumobile">
+        <nav id="menumobile" aria-label=" Menu Mobile">
             <ul>
                 <li>
-                    |||
+                    <button aria-label="Abrir menu">☰</button>
                     <ul>
                         <li><a href="contato.html">Contato</a></li>
                         <li><a href="produtos.html">Produtos</a></li>
@@ -44,29 +44,28 @@
             <h2>Cafés Especiais</h2>
             <div class="container-flex">
                 <article class="card-produto">
-                    <img src="./imagens/prod1.jpeg" alt="Café Espresso">
+                    <img src="./imagens/prod1.jpeg" alt="Café espresso servido em xícara pequena">
                     <div class="card-info">
                         <h3>Café Classico 1</h3>
                         <p>R$ 25</p>
-                        <a href="#">Ler mais...</a>
+                        <a href="#" aria-label="Ler mais sobre Café Clássico 1">Ler mais...</a>
                     </div>
                 </article>
                 <article class="card-produto">
-                    <img src="./imagens/prod7.jpeg" alt="xicara de café">
+                    <img src="./imagens/prod7.jpeg" alt="Xícara de café quente com espuma">
                     <div class="card-info">
                         <h3>Café classico 2</h3>
                         <p>R$ 40,00</p>
-                        <a href="#">Ler mais...</a>
+                        <a href="#" aria-label="Ler mais sobre Café Clássico 2">Ler mais...</a>
                     </div>
                 </article>
                 <article class="card-produto">
-                    <img src="./imagens/prod2.jpeg" alt="xicara de café">
+                    <img src="./imagens/prod2.jpeg" alt="Café servido em xícara branca sobre mesa">
                     <div class="card-info">
                         <h3>Café Classico 3</h3>
                         <p>R$ 40,00</p>
-                        <a href="#">Ler mais...</a>
+                        <a href="#" aria-label="Ler mais sobre Café Clássico 3">Ler mais...</a>
                     </div>
-            </div>
             </article>
             </div>
         </section>
@@ -78,7 +77,7 @@
                     <div class="conteudo-noticia">
                         <h3>Somos uma loja especializada em café de qualidade.</h3>
                         <p>Oferecendo produtos selecionados para quem aprecia</p>
-                        <a href="#">Ler mais...</a>
+                        <a href="#"aria-label="Ler mais sobre a loja">Ler mais...</a> 
                     </div>
         </section>
         </article>
@@ -89,16 +88,18 @@
                     <div class="conteudo-noticia">
                         <h3>Trabalhamos com café em grãos embalados</h3>
                         <p>idealpara quem prefere moer na hora e aproveitar todo o frescor</p>
-                        <a href="#">Ler mais...</a>
+                        <a href="#"aria-label="Ler mais sobre café em grãos">Ler mais...</a> 
                     </div>
                 </article>
+            </div>
         </section>
     </main>
     <footer>
         <div class="footer-links">
             <div class="site-map">
                 <h4>Mapa do Site</h4>
-                <a href="index.html">Home</a>|<a href="#"> Produtos</a>
+                <a href="index.html">Home</a>|
+                <a href="#"> Produtos</a>
             </div>
             <div class="social-media">
                 <h3>Desenvolvedor</h3>

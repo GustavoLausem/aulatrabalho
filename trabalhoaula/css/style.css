@@ -1,17 +1,24 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-size: 16px;
     font-family: tahoma;
 }
-.hero-image{
+
+.hero-image {
     width: 100%;
     height: 400px;
-     background-image: url('../imagens/prod2.jpeg');
-     background-attachment: fixed;
-         background-position: center bottom;
-         background-size: cover;
-         background-repeat: no-repeat;
+    background-image: url('../imagens/prod2.jpeg');
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .hero-image img {
     width: 100%;
     height: 400px;
@@ -19,14 +26,16 @@ body{
     display: block;
 
 }
-.foto{
+
+.foto {
     width: 320px;
     height: 240px;
     border: solid black;
 }
-.foto img{
+
+.foto img {
     max-width: 100%;
-}    
+}
 
 header {
     background-image: url();
@@ -34,9 +43,11 @@ header {
     padding: 2px;
 
 }
-section{
+
+section {
     margin: 50px 0px;
 }
+
 /*PRODUTO*/
 .container-flex {
     display: flex;
@@ -44,35 +55,51 @@ section{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px 5%;
+    
 }
 
 .card-produto {
-    flex: 1 1 22%; 
+    flex: 1 1 30%;
     margin: 10px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #000;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column; /* empilha tudo */
     transition: transform 0.3s;
 }
+.card-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* ocupa o espaço */
+}
 
-.card-produto:hover { transform: scale(1.05); }
+.card-produto:hover {
+    transform: scale(1.05);
+}
 
-.card-produto img { width: 100%; height: auto; display: flex; }
+.card-produto img {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
 /*NOTICIAS*/
 .container-noticias {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 30px;
     padding: 20px 5%;
 }
 
 .card-noticia-h {
-    display: flex; 
+    display: flex;
     background: #fdfdfd;
-    border-left: 5px solid #4e342e; 
-    border-bottom: 1px solid #cd2601; 
+    border-left: 5px solid #4e342e;
+    border-bottom: 1px solid #cd2601;
     align-items: center;
-    
-    
+
+
 }
 
 .card-noticia-h img {
@@ -81,14 +108,18 @@ section{
     object-fit: cover;
 }
 
-.conteudo-noticia { padding: 20px; }
-.conteudo-noticia p{
+.conteudo-noticia {
+    padding: 20px;
+}
+
+.conteudo-noticia p {
     margin: 10px 4px;
 
 }
-.conteudo-noticia a{
-    border:1px solid #000;
-    margin: 2px ;
+
+.conteudo-noticia a {
+    border: 1px solid #000;
+    margin: 2px;
     padding: 4px;
     text-decoration: none;
     color: #d7ccc8;
@@ -96,30 +127,33 @@ section{
     border-radius: 4px;
 
 }
+
 .card-info a {
-    border:1px solid #000;
-    margin: 2px ;
-    padding: 4px;
-    text-decoration: none;
-    color: #000000;
-    background-color: rgb(0, 0, 0);
-    border-radius: 4px;
+    margin-top: auto; /* empurra pra baixo */
+    color: #fff;
+    background: #333;
+    padding: 5px;
+    text-align: center;
+        border-radius: 6px;
+        padding: 8px;
 }
+
 /*MENU*/
-nav#menumobile{
+nav#menumobile {
     display: none;
 }
 
 nav#menudesktop {
-    width: 100%;
-    height: 35px;
-    background-color: rgb(75, 75, 75);
+    background-color: #333;
+    padding: 0 20px;
 }
 
 nav#menudesktop ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* joga pro lado direito */
     align-items: center;
+    gap: 20px; /* espaço entre os itens */
+    height: 60px;
 }
 
 nav#menudesktop ul li {
@@ -127,23 +161,16 @@ nav#menudesktop ul li {
 }
 
 nav#menudesktop ul li a {
+    color: #fff;
     text-decoration: none;
-    color: rgb(63, 63, 63);
-    margin: 4px;
-    padding: 4px;
-    border-bottom:  1px solid rgb(255, 255, 255);
-    border-radius: 4px;
-    border-top: 3px solid black;
-
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
 nav#menudesktop ul li a:hover {
-    transition: all;
-    transition-delay: 70ms;
-    transition-duration: 400ms;
-    background-color: rgb(255, 255, 255);
-    border-left: 5px  solid greenyellow;
-    color: rgb(0, 0, 0);
+    background-color: #fff;
+    color: #333;
 }
 
 /*RODAPE*/
@@ -165,24 +192,35 @@ footer a {
     color: #fff;
     font-weight: normal;
 }
-@media screen and (max-width: 1024px){
+
+@media screen and (max-width: 1024px) {
+
+
     /* MENU */
-    nav#menudesktop{
+    nav#menudesktop {
         display: none;
     }
 
     nav#menumobile {
-        display: block;
+        display: flex;
+        justify-content: flex-start;
         width: 100%;
         background-color: rgb(59, 59, 59);
         border: solid #000;
     }
+    nav#menumobile button {
+        font-size: 30px;
+    padding: 10px;
+    margin-left: 10px; /* dá um respiro da borda */
+    cursor: pointer;
+}
+
     nav#menumobile ul li ul li {
         width: 100%;
         margin: 15px 2px;
     }
 
-    nav#menumobile ul li ul li a{
+    nav#menumobile ul li ul li a {
         display: block;
         height: 45px;
         text-decoration: none;
@@ -194,21 +232,26 @@ footer a {
         box-shadow: 2px 2px 10px 2px rgb(255, 255, 255);
         border-radius: 4px;
     }
+
     /*esconder botões*/
-    nav#menumobile ul li ul{
+    nav#menumobile ul li ul {
         display: none;
     }
+
     nav#menumobile ul li {
         font-size: 30px;
     }
-    nav#menumobile ul li:hover ul, nav#menumobile ul li:focus ul {
+
+    nav#menumobile ul li:hover ul,
+    nav#menumobile ul li:focus ul {
         display: block;
 
-    /* PRODUTOS */
+        /* PRODUTOS */
     }
 
     .card-produto {
-        width: 80%;  /* deixa bonito no celular */
+        width: 80%;
+        /* deixa bonito no celular */
     }
 
     /* NOTÍCIAS */
@@ -233,17 +276,20 @@ footer a {
         text-align: center;
         gap: 20px;
     }
-    .card-info a{
-        border:1px solid #000;
-    margin: 2px ;
-    padding: 4px;
-    text-decoration: none;
-    color: #d7ccc8;
-    background-color: #4e342e;
-    border-radius: 4px;
+
+    .card-info a {
+        border: 1px solid #000;
+        margin: 2px;
+        padding: 4px;
+        text-decoration: none;
+        color: #d7ccc8;
+        background-color: #4e342e;
+        border-radius: 4px;
     }
 }
-@media screen and (max-width: 601px) and (max-width: 1023px){
+
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+
     /* MENU */
     nav ul {
         flex-direction: column;
@@ -256,12 +302,15 @@ footer a {
 
     /* PRODUTOS */
     .container-flex {
-        flex-direction: column; /*  muda de linha para coluna */
-        align-items: center;    /* centraliza os cards */
+        flex-direction: column;
+        /*  muda de linha para coluna */
+        align-items: center;
+        /* centraliza os cards */
     }
 
     .card-produto {
-        width: 80%;  /* deixa bonito no celular */
+        width: 80%;
+        /* deixa bonito no celular */
     }
 
     /* NOTÍCIAS */
@@ -286,17 +335,20 @@ footer a {
         text-align: center;
         gap: 20px;
     }
-    .card-info a{
-        border:1px solid #000;
-    margin: 2px ;
-    padding: 4px;
-    text-decoration: none;
-    color: #d7ccc8;
-    background-color: #4e342e;
-    border-radius: 4px;
+
+    .card-info a {
+        border: 1px solid #000;
+        margin: 2px;
+        padding: 4px;
+        text-decoration: none;
+        color: #d7ccc8;
+        background-color: #4e342e;
+        border-radius: 4px;
     }
 }
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 600px) {
+
     /* MENU */
     nav ul {
         flex-direction: column;
@@ -309,12 +361,15 @@ footer a {
 
     /* PRODUTOS */
     .container-flex {
-        flex-direction: column; /*  muda de linha para coluna */
-        align-items: center;    /* centraliza os cards */
+        flex-direction: column;
+        /*  muda de linha para coluna */
+        align-items: center;
+        /* centraliza os cards */
     }
 
     .card-produto {
-        width: 80%;  /* deixa bonito no celular */
+        width: 80%;
+        /* deixa bonito no celular */
     }
 
     /* NOTÍCIAS */
@@ -339,13 +394,14 @@ footer a {
         text-align: center;
         gap: 20px;
     }
-    .card-info a{
-        border:1px solid #000;
-    margin: 2px ;
-    padding: 4px;
-    text-decoration: none;
-    color: #d7ccc8;
-    background-color: #4e342e;
-    border-radius: 4px;
+
+    .card-info a {
+        border: 1px solid #000;
+        margin: 2px;
+        padding: 4px;
+        text-decoration: none;
+        color: #d7ccc8;
+        background-color: #4e342e;
+        border-radius: 4px;
     }
 }
